@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap&subset=latin-ext,vietnamese" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Racing+Sans+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/master.css">
+        <!--Favicon-->
+        <link rel="shortcut icon" href="img/logo.ico">
+        <title>Thiago Informática</title>
+        <script language="Javascript" src="script/script.js"></script>
+    </head>
+    <body onload="finishload();" onscroll="topbutton()">
+        <div id="loading-box">
+            <div id="loading"></div>
+        </div>
+        <!--Botão para o Topo-->
+        <a href="#" class="button"><img src="img/icons/arrow-up.png" class="button-inter"></a>
+        <!--CABEÇALHO-->
+        <header>
+            <!--Logo da Empresa-->
+            <a href="home.html"><img src="img/logo.svg"></a>
+            <h2>THIAGO INFORMÁTICA</h2>
+            <!--Menu-->
+            <ul>
+                <a href="home.html"><li>Home</li></a>
+                <a href="sobre.html"><li>Sobre</li></a>
+                <a href="clientes.html"><li>Clientes</li></a>
+                <a href="contato.html"><li>Contato</li></a>
+            </ul>
+        </header>
+        <!--FIM CABEÇALHO-->
+        <!--Conteúdo Total entre Cabeçalho e Rodape-->
+        <div class="full-content">
+            <!--APRESENTAÇÃO-->
+            <div class="content">
+                <!--Imagem só sera Apresentada no Print-->
+                <img src="img/bibliotec.png" alt="Biblioteca de Imagens" class="hidden">
+                <!--Biblioteca de Imagens-->
+                <div class="bibliotec">
+                    <img class="image image3" src="img/image3.png">
+                    <img class="image image2" src="img/image2.png">
+                    <img class="image image1" src="img/image1.png">
+                </div>
+                <p>A Thiago Informática é uma empresa especializada em suporte técnico em computadores. 
+                    Dentre muitos dos serviços oferecidos, alguns incluem checagem e limpeza de hardware, 
+                    atualização de programas e verificação da integridade dos arquivos em disco, minimizando 
+                    os riscos nas falhas do computador e perda dos dados armazenados. Dispomos de 
+                    técnicos preparados e que possuem as respostas que você necessita para praticamente 
+                    qualquer assunto relacionado com problemas em computadores e notebooks.</p>
+            </div>
+            <!--FIM APRESENTAÇÃO-->
+            <!--SERVIÇOS-->
+            <div class="services">
+                <!--Caixa contendo Serviços-->
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box1">
+                    <!--Links para Iniciar Animação-->
+                    <a class="service"><img src="img/icons/support.png"></a>
+                    <!--Paragrafo Oculto, Vísivel somente na Animação-->
+                    <p>Suporte e Manutenção de Equipamentos, Rede de Dados e Computadores.</p>
+                </div>
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box2">
+                    <a class="service"><img src="img/icons/shield.png"></a>
+                    <p>Prevenção, Detecção e Eliminação de Ameaças, Vírus e Malwares.</p>
+                </div>
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box3">
+                    <a class="service"><img src="img/icons/hands-helping.png"></a>
+                    <p>Segurança e Controle de Usuários e Acessos.</p>
+                </div>
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box4">
+                    <a class="service"><img src="img/icons/computer-add.png"></a>
+                    <p>Equipamentos Reserva para Substituição Imediata.</p>
+                </div>
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box5">
+                    <a class="service"><img src="img/icons/network.png"></a>
+                    <p>Central de Suporte e Manutenção Online.</p>
+                </div>
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box6">
+                    <a class="service"><img src="img/icons/phone.png"></a>
+                    <p>Atendimento em até 8 Horas Úteis.</p>
+                </div>
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box7">
+                    <a class="service"><img src="img/icons/monitoring.png"></a>
+                    <p>Monitoramento Online do Ambiente de Informática.</p>
+                </div>
+                <div onmouseover="animehover(this)" onmouseout="endhover(this)" class="service-box box8">
+                    <a class="service"><img src="img/icons/recycling.png"></a>
+                    <p>Descarte Ecologicamente Correto de Lixo Eletrônico.</p>
+                </div>
+            </div>
+            <!--FIM SERVIÇOS-->
+            <!--SOLUÇÕES-->
+            <div class="soluction">
+                <!--Circulo com Background Animado-->
+                <div class="slide"></div>
+                <!--Lista com Testo de Soluções-->
+                <div class="soluction-text">
+                    <h1 class="title">SOLUÇÕES</h1>
+                    <ul>
+                        <li>Instalação e atualização de Sistemas Operacionais</li>
+                        <li>Recuperação de arquivos deletados</li>
+                        <li>Backup de arquivos e e-mail</li>
+                        <li>Instalação de Software em geral</li>
+                        <li>Troca de peças defeituosas ou antigas</li>
+                        <li>Limpeza interna de Computadores e Equipamentos</li>
+                        <li>Softwares para análises e aumento da velocidade do micro</li>
+                        <li>Instalação e atualização de anti-vírus e anti-spyware</li>
+                        <li>Verificação de rede, internet e e-mail</li>
+                        <li>Remoção de vírus e malware, Otimização de desempenho, etc.</li>
+                        <li>Upgrades, Memórias, HDs, etc</li>
+                        <li>Assistência a Hardware, Software e Rede</li>
+                    </ul>
+                </div>
+            </div>
+            <!--FIM SOLUÇÕES-->
+            <!--PLANOS-->
+            <div class="planos">
+                <div class="planos-box">
+                <h1 class="title">PLANOS</h1>
+                    <!--TABELA DE PLANOS (Só será Exibida acima de 459px de Largura)-->
+                    <table>
+                        <!--Cabeçalho da Tabela-->
+                        <thead>
+                            <tr>
+                                <th>Basic</th>
+                                <th>Standard</th>
+                                <th>Professional</th>
+                            </tr>
+                        </thead>
+                        <!--Fim Cabeçalho da Tabela-->
+                        <!--Corpo da Tabela-->
+                        <tbody>
+                            <tr>
+                                <td>Suporte Remoto</td>
+                                <td>Suporte Remoto</td>
+                                <td>Suporte Remoto</td>
+                            </tr>
+                            <tr>
+                                <td>Suporte Presencial</td>
+                                <td>Suporte Presencial</td>
+                                <td>Suporte Presencial</td>
+                            </tr>
+                            <tr>
+                                <td>Help-Desk</td>
+                                <td>Help-Desk</td>
+                                <td>Help-Desk</td>
+                            </tr>
+                            <tr>
+                                <td>Manutenção Corretiva</td>
+                                <td>Manutenção Corretiva</td>
+                                <td>Manutenção Corretiva</td>
+                            </tr>
+                            <tr>
+                                <td>Manutenção Preventiva</td>
+                                <td>Manutenção Preventiva</td>
+                                <td>Manutenção Preventiva</td>
+                            </tr>
+                            <tr>
+                                <td>Backup Local</td>
+                                <td>Backup Local</td>
+                                <td>Backup Local</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Monitoramento de Ativos</td>
+                                <td>Monitoramento de Ativos</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Controle de Inventário</td>
+                                <td>Controle de Inventário</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>Gestão de Servidores</td>
+                                <td>Gestão de Servidores</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Antivírus Corporativo</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Proxy / Firewall</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Gestão de Backup Nuvem</td>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Consultoria</td>
+                            </tr>
+                        </tbody>
+                        <!--Corpo da Tabela-->
+                    </table>
+                    <!--LISTA DE PLANOS (Só será Exibida abaixo ou Igual a 459px de Largura)-->
+                    <ul>
+                        <li class="th-list">Basic</li>
+                            <li class="td-list">Suporte Remoto</li>
+                            <li class="td-list">Suporte Presencial</li>
+                            <li class="td-list">Help-Desk</li>
+                            <li class="td-list">Manutenção Corretiva</li>
+                            <li class="td-list">Manutenção Preventiva</li>
+                            <li class="td-list">Backup Local</li>
+                        <li class="th-list">Standard</li>
+                            <li class="td-list">Suporte Remoto</li>
+                            <li class="td-list">Suporte Presencial</li>
+                            <li class="td-list">Help-Desk</li>
+                            <li class="td-list">Manutenção Corretiva</li>
+                            <li class="td-list">Manutenção Preventiva</li>
+                            <li class="td-list">Backup Local</li>
+                            <li class="td-list">Monitoramento de Ativos</li>
+                            <li class="td-list">Controle de Inventário</li>
+                            <li class="td-list">Gestão de Servidores</li>
+                        <li class="th-list">Professional</li>
+                            <li class="td-list">Suporte Remoto</li>
+                            <li class="td-list">Suporte Presencial</li>
+                            <li class="td-list">Help-Desk</li>
+                            <li class="td-list">Manutenção Corretiva</li>
+                            <li class="td-list">Manutenção Preventiva</li>
+                            <li class="td-list">Backup Local</li>
+                            <li class="td-list">Monitoramento de Ativos</li>
+                            <li class="td-list">Controle de Inventário</li>
+                            <li class="td-list">Gestão de Servidores</li>
+                            <li class="td-list">Antivírus Corporativo</li>
+                            <li class="td-list">Proxy / Firewall</li>
+                            <li class="td-list">Gestão de Backup Nuvem</li>
+                            <li class="td-list">Consultoria</li>
+                    </ul>
+                </div>
+                <!--Botão Contratar-->
+                <div class="contratar">
+                    <div class="slide"></div>
+                    <a href="contato.html">Contratar</a>         
+                </div>
+                <!--Fim Botão-->
+            </div>
+            <!--FIM PLANOS-->
+        </div>
+        <!--Fim de Conteúdo Total-->
+        <!--Rodape-->
+        <div class="rodape">
+            <div class="parcerias">
+                <h4>Parcerias</h4>
+                <a class="slide" href="https://www.instagram.com/vidphotoart/" target="_blank"></a>
+            </div>
+            <div class="sociais">
+                <h4>Redes Sociais</h4>
+                <div class="social-box">
+                    <a class="whatsapp" href="https://wa.me/5583996646397" target="_blank">
+                        <img class="social-img" src="img/icons/whatsapp.png">
+                    </a>
+                    <a class="instagram" href="https://www.instagram.com/thiagoinformatica_" target="_blank">
+                        <img class="social-img" src="img/icons/instagram.png">
+                    </a>
+                </div>
+            </div>
+            <div class="creditos">
+                <p>2020 Thiago Informática</p><p class="divisor"> | </p>
+                <p>Desenvolvimento: <a href="https://www.linkedin.com/in/lucianocarvalhof/" target="_blank">Luciano de Carvalho</a></p><p class="divisor"> | </p>
+                <p>Desenvolvimento de Art's: <a href="https://www.instagram.com/vidphotoart/" target="_blank">VPA</a></p>
+            </div>
+        </div>
+        <!--Final Rodape-->
+    </body>
+</html>

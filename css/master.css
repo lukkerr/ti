@@ -1,0 +1,1398 @@
+/*IMPORTANDO ARQUIVO CSS COM ANIMAÇOES*/
+@import url(animation.css);
+
+/*CONFIG PARA ALIAMENTO DE CONTÉUDO CENTRAL*/
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0;
+        background-color: whitesmoke;
+    }
+    #loading, #loading-box{
+        position: fixed;
+        margin: 0;        
+    }
+    #loading-box{
+        transition: opacity 2s;
+        -webkit-transition: opacity 2s;
+        -moz-transition: opacity 2s;
+        -o-transition: opacity 2s;
+        width: 100vw;
+        height: 100vh;
+        background-color: #009DFF;
+        z-index: 110;
+    }
+    #loading{
+        animation: rotate 1s linear infinite;
+        -webkit-animation: rotate 1s linear infinite;
+        -moz-animation: rotate 1s linear infinite;
+        -o-animation: rotate 1s linear infinite;
+        top: calc(50vh - 50px);
+        left: calc(50vw - 50px);
+        transition: opacity 1s;
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        border: solid 5px #54bdff;
+        border-right: solid 5px white;
+        z-index: 120;
+    }
+
+/*FIM CONFIG DE ALINHAMENTO*/
+
+/*BOTÃO TOPO*/
+    /*BOTÃO PARA O TOPO DA PAGINA*/
+
+    .button{
+        display: none;
+        animation-name: translate-bottom;
+        -moz-animation-name: translate-bottom;
+        -webkit-animation-name: translate-bottom;
+        -o-animation-name: translate-bottom;
+        animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        border: solid 2px;
+        border-color: white;
+        padding: 15px;
+        padding-bottom: 10px;
+        border-radius: 50%;
+        background-color: #001542;
+        margin: 0;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
+    }
+
+    /*DEFINIDO TAMANHO DA IMAGEM INTERNA DO BOTÃO (UMA VEZ QUE FOI SALVO COMO .SVG)*/
+    .button-inter{
+        width: 25px;
+    }
+
+    /*MUDANDO BACKGROUND DO BOTÃO*/
+    .button:hover{
+        background-color: #1087C8;
+    }
+/*FIM BOTÃO TOPO*/
+
+/*CABEÇALHO*/
+
+    /*AJUSTANDO CABEÇALHO*/
+    header{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #001542;
+    }
+
+    /*TITULO DA PAGINA*/
+    header h2{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: 'Racing Sans One', cursive;
+        color: white;
+        transition: color 1s;
+        -webkit-transition: color 1s;
+        -moz-transition: color 1s;
+        -o-transition: color 1s;
+        text-align: center;
+    }
+
+    /*HOVER DE TITULO DA PAGINA*/
+    header h2:hover{
+        color: #1087C8;
+    }
+
+    /*LOGO DA EMPRESA*/
+    header img{
+        height: 150px;
+        margin-top: 20px;
+        animation-name: translate-left;
+        -moz-animation-name: translate-left;
+        -webkit-animation-name: translate-left;
+        -o-animation-name: translate-left;
+        animation-duration: 4s;
+        -moz-animation-duration: 4s;
+        -webkit-animation-duration: 4s;
+        -o-animation-duration: 4s;
+    }
+
+    /*MENU DA PAGINA*/
+    header ul{
+        display: grid;
+        display: -ms-grid;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /*DECORAÇÃO DE LINKS DO MENU*/
+    header ul a, .mailto, .phone{
+        text-decoration: none;
+        margin: 8px;
+        padding: 7px 8px;
+        background-color: #1087C8;
+        background-image: linear-gradient(45deg, rgba(82, 68, 68, 0.6), transparent);
+        color: white;
+        border-radius: 5px;
+        transition: background-color 1s, background-image 1s;
+        -webkit-transition: background-color 1s, background-image 1s;
+        -moz-transition: background-color 1s, background-image 1s;
+        -o-transition: background-color 1s, background-image 1s;
+    }
+
+    /*HOVER DO BOTÃO DE MENU*/
+    header ul a:hover{
+        background-color: #60C8EC;
+        background-image: linear-gradient(45deg, rgba(0, 21, 66, .50) transparent);
+    }
+
+/*FIM CABEÇALHO*/
+
+/*CONTÉUDO DE APRESENTAÇÃO*/
+
+    /*CONTEÚDO DE APRESENTAÇÃO DA PÁGINA HOME*/
+    .content{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        padding-bottom: 0px;
+    }
+
+    /*BIBLIOTECA DE IMAGENS*/
+    .content .bibliotec{
+        /*POSITION RELATIVO, POIS CONTÉUDO INTERNO SERA ABSOLUTE*/
+        position: relative;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+        margin-bottom: 40px;
+    }
+
+    /*IMAGENS DA BIBLIOTECA*/
+    .content img{
+        opacity: 0.7;
+        transition: opacity 1.5s;
+        -webkit-transition: opacity 1.5s;
+        -moz-transition: opacity 1.5s;
+        -o-transition: opacity 1.5s;
+        width: 80vw;
+        margin-bottom: 20px;
+        border: solid 4px;
+        border-color: whitesmoke;
+    }
+
+    /*DESTACANDO IMAGEM DA BIBLIOTECA AO COLOCAR MOUSE SOBRE ELA*/
+    .content img:hover{
+        z-index: 10;
+        opacity: 1;
+    }
+
+    /*POSICIONAMENTO ANIMAÇÕES DE IMAGENS DA BIBLIOTECA*/
+    .content .bibliotec .image3{
+        animation-name: translate-right;
+        -moz-animation-name: translate-right;
+        -webkit-animation-name: translate-right;
+        -o-animation-name: translate-right;
+        animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        -o-animation-duration: 2s;
+    }
+
+    .content .bibliotec .image2{
+        animation-name: translate-left;
+        -moz-animation-name: translate-left;
+        -webkit-animation-name: translate-left;
+        -o-animation-name: translate-left;
+        animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        -o-animation-duration: 2s;
+        position: absolute;
+        top: 20px;
+        left: 20px
+    }
+
+    .content .bibliotec .image1{
+        animation-name: translate-right;
+        -moz-animation-name: translate-right;
+        -webkit-animation-name: translate-right;
+        -o-animation-name: translate-right;
+        animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        -o-animation-duration: 2s;
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    /*ANIMAÇÃO COM TEXTO DO CONTÉUDO DE APRESENTAÇÃO*/
+    .content p{
+        animation-name: p-translate-left;
+        -moz-animation-name: p-translate-left;
+        -webkit-animation-name: p-translate-left;
+        -o-animation-name: p-translate-left;
+        animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        -o-animation-duration: 2s;
+        text-align: left;
+        margin: 20px;
+    }
+
+/*FIM CONTÉUDO DE APRESENTAÇÃO*/
+
+/*SERVIÇOS*/
+
+    /*AJUSTANDO SERVIÇOS*/
+    .services{
+        position: relative;
+        display: grid;
+        display: -ms-grid;
+        align-items: initial;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin: 0;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    /*CAIXA COM CONTEUDO DE SERVIÇOS, USADA PARA MUDANÇA DE DISPLAY NA ANIMAÇÃO*/
+    .service-box{
+        margin: auto;
+        margin-top: 0;
+        height: fit-content; /*AJUSTA A ALTURA MATENDO A CAIXA COM A MESMA ALTURA DOS SEUS SERVIÇOS*/
+        width: fit-content;
+        display: flex;
+        border-radius: 50%;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    /*PARAGRAFO COM TEXTO DE SERVIÇOS, QUE SÓ SERA VISIVEL NA ANIMAÇÃO*/
+    .service-box p{
+        font-size: 10px;
+        text-align: center;
+        width: 100px;
+        background-color: #009DFF;
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        display: none;
+    }
+
+    /*ATIVANDO ANIMAÇÃO EM CIRCLE DOS SERVIÇOS*/
+    .service-box:hover .service{
+        background-color: #1087C8;
+    }
+
+    /*ATIVANDO ANIMAÇÃO DE TEXTO DOS SERVIÇOS*/
+    .service-box:hover p{
+        animation-name: translate-bottom;
+        -moz-animation-name: translate-bottom;
+        -webkit-animation-name: translate-bottom;
+        -o-animation-name: translate-bottom;
+        animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        display: unset;
+    }
+
+    /*CONFIGURAÇÕES DE CADA CIRCLE DOS SERVIÇOS*/
+    .service{
+        transition: background-color 1s;
+        -webkit-transition: background-color 1s;
+        -moz-transition: background-color 1s;
+        -o-transition: background-color 1s;
+        color: white;
+        margin-top: 0;
+        height: fit-content;
+        border-radius: 50%;
+        background-color: #144B65;
+        padding: 20px;
+        padding-bottom: 15px;
+    }
+    .service-box img{
+        width: 40px;
+        height: 40px;
+    }
+    /*AJUSTE DE LARGURA DOS ICONES DOS SERVIÇOS PARA ICONES COM LARGURA DIFERENTE DA ALTURA*/
+
+/*FIM SERVIÇOS*/
+
+
+/*SOLUÇÕES*/
+
+    /*AJUSTE DE SOLUÇOES*/
+    .soluction{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #001542;
+        color: white;
+        padding-top: 1.5vw;
+        padding-bottom: 1.5vw;
+    }
+
+    /*CONFIG DE TITULO GENERICO*/
+    .title{
+        font-family: 'Anton', sans-serif;
+        color: #001542;
+        text-align: center;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -o-transition: all 1s;
+    }
+
+    /*HOVER DE TITULO GENERICO*/
+    .title:hover{
+        color: #1087C8;
+    }
+
+    /*TITULO ESPECIFICO*/
+    .soluction .title{
+        color: whitesmoke;
+    }
+    
+    /*HOVER DE TITULO ESPECIFICO*/
+    .soluction .title:hover{
+        color: white;
+    }
+
+    /*CONFIG DE CIRCLE ANIMADO*/
+    .slide{
+        animation: slide-animation 16s infinite linear;
+        -moz-animation: slide-animation 16s infinite linear;
+        -webkit-animation: slide-animation 16s infinite linear;
+        -o-animation: slide-animation 16s infinite linear;
+        background-blend-mode: overlay;
+        background-size: cover;
+        margin: auto;
+        margin-top: 20px;
+        padding: 0;
+        width: 65vw;
+        height: 65vw;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, .3);
+        transition: all 2s;
+        -webkit-transition: all 2s;
+        -moz-transition: all 2s;
+        -o-transition: all 2s;
+    }
+
+    /*HOVER DE CIRCLE ANIMADO*/
+    .slide:hover{
+        border-radius: 4vw;
+        animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+        -o-animation-play-state: paused;
+        background-color: transparent;
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+    }
+
+    /*TEXTO DE SOLUÇOES*/
+    .soluction-text{
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    /*LISTA DE TEXTO DE SOLUÇÕES*/
+    .soluction-text ul{
+        padding: 0;
+        margin: auto;
+        list-style: square;
+    }
+
+    /*ITEM NA LISTA*/
+    .soluction-text ul li{
+        margin: 10px;
+    }
+
+/*FIM SOLUÇÕES*/
+
+/*PLANOS*/
+
+    /*AJUSTANDO PLANOS*/
+    .planos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        margin-top: 30px;
+    }
+
+    /*CONTÉUDO INTERNO TOTAL DE PLANOS*/
+    .planos-box{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /*TABELA DE PLANOS, QUE SERA INVISIVEL ATÉ 449PX DE LARGURA*/
+    .planos table{
+        border: solid;
+        border-collapse: collapse;
+    }
+
+    /*LISTA DE PLANOS, QUE SERA VISIVEL SOMENTE ATÉ 449PX DE LARGURA*/
+    .planos ul{
+        list-style-type: none;
+        padding: 0;
+        display: none;
+    }
+
+    /*CELULAS DO CORPO DA TABELA E DOS ITENS DA LISTA*/
+    .planos td, .planos th, .planos .td-list, .planos .th-list{
+        text-align: center;
+        border: 1px solid;
+        padding: .4em 1em;
+        color: white
+    }
+
+    /*CELULAS DE CABEÇALHO DA TABELA E DE ITENS*/
+    .planos th, .planos .th-list{
+        background-color: #001542;
+    }
+
+    /*LINHA DO CORPO DA TABELA E ITENS DO CORPO DA LISTA*/
+    .planos tbody tr, .planos .td-list{
+        background-color: rgb(85, 124, 253)
+    }
+
+    /*HOVER DO BODY DA TABELA E DA LISTA*/
+    .planos tbody tr:hover, .planos .td-list:hover{
+        background: #60C8EC;
+        color: whitesmoke;
+    }
+
+    /*MANTEM O TITULO DA COLUNA FIXADO DO TOPO DURANDO ROLAGEM DE TELA*/
+    .planos .th-list{
+        top: -1px;
+        position: sticky;
+        position: -webkit-sticky;
+    }
+
+/*FIM PLANOS*/
+
+/*CONTRATAR*/
+
+    /*AJUSTANDO CONTRATAR*/
+    .contratar{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*AJUSTANDO BOTÃO CONTRATAR*/
+    .contratar a{
+        margin: 20px auto;
+        font-weight: bold;
+        padding: 10px 15px;
+        color: white;
+        background-color: red;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    /*AJUSTANDO FUNÇOES ESPECIFICAS DO CIRCLE ANIMADO DE CONTRATAR*/
+    .contratar .slide{
+        animation-name: slide-contratar;
+        -moz-animation-name: slide-contratar;
+        -webkit-animation-name: slide-contratar;
+        -o-animation-name: slide-contratar;
+        animation-duration: 6s;
+        -moz-animation-duration: 6s;
+        -webkit-animation-duration: 6s;
+        -o-animation-duration: 6s;
+        display: none;
+    }
+
+/*FIM CONTRATAR*/
+
+
+/*RODAPE*/
+
+    .rodape{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #001542;
+        align-items: center;
+    }
+
+    .parcerias{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rodape h4{
+        margin: 10px auto;
+        color: white;
+    }
+
+    .parcerias .slide{
+        animation: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        background-color: transparent;
+        background-image: url(../img/vpa.jpg);
+        width: 100px;
+        height: 100px;
+        margin: 0;
+    }
+
+
+
+    .creditos{
+        color: white;
+        margin: 10px;
+        font-size: .7em;
+    }
+
+    .creditos p a{
+        border: solid 2px whites;
+        font-weight: bold;
+        text-decoration: none;
+        color: red;
+    }
+
+    .divisor{
+        display: none;
+    }
+
+    .sociais{
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .whatsapp, .instagram{
+        margin: auto 10px;
+        font-size: 30px;
+        padding: 7px 10px 2px 10px;
+        border-radius: 50%;
+    }
+
+    .whatsapp{
+        background-color: #00E676;
+    }
+
+    .instagram{
+        background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+        background-image: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        background-image: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    }
+
+    .social-img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .whatsapp:hover, .instagram:hover{
+        animation-name: services-hover;
+        -moz-animation-name: services-hover;
+        -webkit-animation-name: services-hover;
+        -o-animation-name: services-hover;
+        animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        -o-animation-duration: 2s;
+    }
+
+    .social-box{
+        display: flex;
+    }
+
+/*FIM RODAPE*/
+
+/*SOBRE*/
+
+    /*AJUSTANDO SOBRE*/
+    .sobre{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*AJUSTANDO IMAGEM DO SOBRE*/
+    .sobre img{
+        animation-name: translate-left;
+        -moz-animation-name: translate-left;
+        -webkit-animation-name: translate-left;
+        -o-animation-name: translate-left;
+        animation-duration: 2s;
+        -moz-animation-duration: 2s;
+        -webkit-animation-duration: 2s;
+        -o-animation-duration: 2s;
+        width: 180px;
+    }
+
+    /*AJUSTANDO GRID DE CARDS DA EMPRESA*/
+    .sobre-empresa{
+        display: grid;
+        display: -ms-grid;
+        grid-template-columns: 1fr;
+        margin-bottom: 1vw;
+        color: white;
+    }
+
+    /*TITULO DE CARD*/
+    .sobre-empresa .title{
+        color: whitesmoke;
+    }
+
+    /*HOVER DE TITULO*/
+    .sobre-empresa .title:hover{
+        color: white;
+    }
+
+    /*AJUSTANDO ANIMAÇÃO DE TEXTO PRINCIPAL DO SOBRE E PARAGRADO DE CARD*/
+    .sobre-text, .text-empresa p{
+        animation-name: translate-bottom;
+        -moz-animation-name: translate-bottom;
+        -webkit-animation-name: translate-bottom;
+        -o-animation-name: translate-bottom;
+        animation-duration: 1s;
+        -moz-animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        -o-animation-duration: 1s;
+        padding-bottom: 5px;
+        margin: 10px;
+    }
+
+    /*AJUSTANDO CARDS DO GRID*/
+    .text-empresa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px white;
+        background-color: #3a37e9;
+    }
+
+    /*HOVER DOS CARDS*/
+    .text-empresa:hover{
+        background-color: #1087C8;
+    }
+    
+    .text-empresa h1{
+        margin: auto;
+        margin-top: 3.5vw;
+        margin-bottom: 1vw;
+    }
+
+/*FINAL SOBRE*/
+
+/*CLIENTES*/
+
+    /*AJUSTANDO CLIENTES*/
+    .clientes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    /*MODIFICAÇÃO ESPEFICICA DO CIRCLE ANIMADO DE CLIENTES*/
+    .clientes .slide{
+        margin: 2vw auto;
+        animation-name: none;
+        background-image: url(../img/sobcontrole.jpg);
+    }
+
+/*FINAL CLIENTES*/
+
+/*CONTATO*/
+
+    .container-mapa{
+        margin: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        background-color: #001542;
+        text-align: center;
+    }
+
+    .mapa{
+        margin: 0px;
+        width: 80vw;
+        height: 60vw;
+    }
+
+    .contato{
+        text-align: center;
+    }
+
+    .contato-direct{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .sub-contato h2{
+        font-family: 'Oswald';
+    }
+
+    .sub-contato p{
+        font-size: 20px;
+        font-weight: bold;
+        color: #144B65;
+        -webkit-text-stroke-width: .5px;
+        -webkit-text-stroke-color: #001542;
+        text-shadow: 2px 2px rgba(0, 0, 0, .3);
+        transition: 1s all;
+    }
+
+    .sub-contato p:hover{
+        transform: scale(1.2);
+        color: #001542;
+    }
+
+    .contato-p1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+/*FIM CONTATO*/
+
+/*PRINT*/
+
+    /*SÓ APARECERA AO SER IMPRESSO*/
+    .hidden{
+        display: none;
+    }
+
+/*FIM PRINT*/
+
+/*RESOLUÇÕES*/
+
+@media screen and (max-height: 176px){
+    header img{
+        height: 110px;
+    }
+}
+
+@media screen and (max-width: 176px){
+    body{
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 208px){
+    header ul{
+        grid-template-columns: 1fr;
+    }
+    .content .bibliotec, .soluction .slide{
+        display: none;
+    }
+    .parcerias .slide{
+        width: 80vw;
+        height: 80vw;
+    }
+    .container-mapa{
+        display: none;
+    }
+    .sub-contato p{
+        font-size: 9px;
+    }
+    .sub-contato p:hover{
+        transform: scale(1.1);
+    }
+}
+
+@media screen and (min-width: 250px){
+    .services{
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
+    }
+    .sobre img{
+        width: 220px;
+    }
+}
+
+@media screen and (min-width: 280px){
+    .sobre-text, .text-empresa p{
+        margin: 1.5vw 2vw;
+    }
+    .sobre img{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 285px){
+    .content .bibliotec{
+        margin-right: 10vw;
+        margin-left: 2vw;
+    }
+    .content .bibliotec .image2{
+        top: 10px;
+        left: 10px
+    }
+    .content .bibliotec .image1{
+        top: 20px;
+        left: 20px;
+    }
+    .sub-contato p{
+        font-size: 16px;
+    }
+}
+
+
+@media screen and (min-width: 390px){
+    header ul{
+        grid-template-columns: repeat(4,1fr);
+        height: fit-content;
+    }
+    .sobre img{
+        width: 300px;
+    }   
+}
+
+@media screen and (max-height: 390px){
+    .button{
+        display: none
+    }
+    header img{
+        margin-top: 0;
+    }
+    header h2{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 434px){
+    .content{
+        margin: auto;
+        padding: 0;
+        padding-top: 15px;
+    }
+    .planos{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 599px){
+    .sobre-empresa{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .valores{
+        grid-column: 1/3;
+        -ms-grid-column: 1/3;
+    }
+}
+
+@media screen and (max-width: 459px){
+    .planos table{
+        display: none;
+    }
+    .planos ul{
+        display: unset;
+        margin: 5px;
+    }
+}
+
+@media screen and (min-width: 480px){
+    .mapa{
+        width: 384px;
+        height: 288px;
+    }
+}
+
+@media screen and (max-width: 499px){
+    .soluction ul{
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 699px){
+    .services{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .box7{
+        grid-column: 1/3;
+        -ms-grid-column: 1/3;
+        grid-row: 3/4;
+        -ms-grid-row: 3/4;
+    }
+    .box8{
+        grid-column: 2/4;
+        -ms-grid-column: 2/4;
+        grid-row: 3/4;
+        -ms-grid-row: 3/4;
+    }
+    .box7 p,.box8 p{
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 545px) and (max-width: 750px){
+    .creditos{
+        margin-bottom: 20px;
+    }
+    .creditos p{
+        display: inline;
+    }
+    .rodape{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .parcerias, .creditos{
+        margin: 10px auto;
+    }
+    .divisor{
+        display: unset;
+    }
+    .contato-direct{
+        flex-direction: row;
+    }
+    .sub-contato{
+        margin: auto 8vw;
+    }
+}
+
+@media screen and (min-width: 550px){
+    .content img{
+        width: 440px;
+    }
+    .text-empresa h1{
+        margin-top: 19.25px;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .content .bibliotec .image3{
+        animation-name: translate-right;
+        -moz-animation-name: translate-right;
+        -webkit-animation-name: translate-right;
+        -o-animation-name: translate-right;
+    }
+    .content .bibliotec .image2{
+        animation-name: translate-left;
+        -moz-animation-name: translate-left;
+        -webkit-animation-name: translate-left;
+        -o-animation-name: translate-left;
+    }
+    .content .bibliotec .image1{
+        animation-name: translate-right;
+        -moz-animation-name: translate-right;
+        -webkit-animation-name: translate-right;
+        -o-animation-name: translate-right;
+    }
+    .slide{
+        width: 480px;
+        height: 480px;
+        margin-top: 50px;
+    }
+    .sobre-empresa{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .clientes .slide{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .services{
+        grid-template-columns: repeat(4,1fr);
+        gap: 80px;
+        row-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 730px){
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header img{
+        margin: 20px;
+    }
+    header ul{
+        grid-template-columns: repeat(2,1fr);
+        margin-right: 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    header h2{
+        font-size: 30px;
+    }
+    .service-box p{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 751px){
+    .rodape{
+        flex-direction: row;
+    }
+    .parcerias{
+        order: 1;
+        margin: auto;
+        margin-bottom: 2vw;
+    }
+    .parcerias p{
+        margin-bottom: 0px;
+    }
+    .creditos{
+        order: 2;
+        margin: auto;
+        font-size: .75em;
+    }
+    .sociais{
+        order: 3;
+        margin: auto;
+    }
+    .contato-p1{
+        flex-direction: row;
+        margin: auto 2vw;
+        justify-content: space-between;
+    }
+    .contato-direct{
+        margin: auto;
+        margin-top: .2vw;
+        margin-bottom: 1vw;
+    }
+    .tel{
+        margin-top: 0;
+    }
+}
+
+@media screen and (min-width: 825px){
+    .content{
+        flex-direction: row;
+        justify-content: space-between
+    }
+    .content img{
+        margin-left: 20px;
+    }
+    .sobre{
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .soluction{
+        flex-direction: row-reverse;
+    }
+    .slide, .clientes .slide{
+        margin: auto;
+        width: 30vw;
+        height: 30vw;
+    }
+    .parcerias .slide{
+        width: 10vw;
+        height: 10vw;
+    }
+    .creditos{
+        font-size: 1.2vw;
+    }
+    .rodape h4{
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
+    }
+    .parcerias{
+        margin-top: .7vw;
+        margin-bottom: 1.5vw;
+    }
+    .whatsapp, .instagram{
+        margin: auto 1vw;
+        font-size: 3vw;
+        padding-top: .8vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+        padding-bottom: .1vw;
+    }
+    .social-img{
+        padding: 0;
+        margin: 0;
+        width: 3vw;
+        height: 3vw;
+    }
+    .mapa{
+        width: 38.4vw;
+        height: 28.8vw;
+    }
+}
+
+@media screen and (min-width: 1150px){
+    header ul{
+        grid-template-columns: repeat(4,1fr);
+    }
+    header h2{
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width: 1280px){ 
+    .services{
+        grid-template-columns: repeat(8,1fr);
+        gap: 45px;
+        margin-top: 40px;
+    }
+    .service{
+        margin: auto;
+    }
+    .title{
+        font-size: 2.4vw;
+        width: fit-content;
+        margin: auto;
+    }
+    .title-topo{
+        margin-top: 1vw;
+    }
+    .sobre-empresa .title{
+        margin-top: 1vw;
+        margin-bottom: .8vw;
+    }
+    .soluction-text ul{
+        font-size: 1.2vw;
+    }
+    .planos{
+        flex-direction: row-reverse;
+    }
+    .planos table{
+        margin-right: 2vw;
+        border: black solid .2vw;
+    }
+    .contratar .slide{
+        display: flex;
+        margin-bottom: 1vw;
+    }
+    .contratar a{
+        text-align: center;
+        width: fit-content;
+        border-radius: .5vw;
+    }
+    .rodape{
+        margin-top: 2vw;
+    }
+    .clientes .slide{
+        margin-top: 2vw;
+    }
+    .creditos p{
+        display: inline;
+    }
+    .divisor{
+        display: unset;
+    }
+}
+
+@media screen and (min-width: 1500px){
+    header img{
+        height: 12vw;
+        margin-right: .5vw;
+        margin-top: .5vw;
+        margin-bottom: .5vw;
+    }
+    header h2{
+        font-size: 2.5vw ;
+    }
+    header ul{
+        font-size: 1vw;
+        margin-right: 1vw;
+    }
+    header ul a{
+        padding: .5vw .7vw;
+        border-radius: .3vw;
+        margin: auto .5vw;
+    }
+    .content img{
+        width: 40vw;
+        margin-top: 2vw;
+        margin-left: 2vw;
+        border: solid .25vw whitesmoke;
+    }
+    .content p{
+        font-size: 1.5vw;
+        margin: 2.5vw;
+    }
+    .button{
+        padding: 1vw;
+        padding-bottom: calc(1vw - 5px);
+        bottom: 2vw;
+        right: 2vw;
+    }
+    .button-inter{
+        width: 2vw;
+    }
+    .content .bibliotec .image2{
+        top: 1vw;
+        left: 1vw;
+    }
+    .content .bibliotec .image1{
+        top: 2vw;
+        left: 2vw;
+    }
+    .content .bibliotec .image3{
+        animation-name: translate-right;
+        -moz-animation-name: translate-right;
+        -webkit-animation-name: translate-right;
+        -o-animation-name: translate-right;
+    }
+    .content .bibliotec .image2{
+        animation-name: translate-left;
+        -moz-animation-name: translate-left;
+        -webkit-animation-name: translate-left;
+        -o-animation-name: translate-left;
+    }
+    .content .bibliotec .image1{
+        animation-name: translate-right;
+        -moz-animation-name: translate-right;
+        -webkit-animation-name: translate-right;
+        -o-animation-name: translate-right;
+    }
+    .services{
+        margin-top: 4vw;
+        grid-template-columns: repeat(8,1fr);
+        gap: auto;
+        margin-top: 40px;
+    }
+    .service{
+        padding: 1.2vw;
+        padding-bottom: calc(1.2vw - 5px);
+    }
+    .service-box img{
+        width: 3vw;
+        height: 3vw;
+    }
+    .service-box p{
+        padding: .3vw;
+        width: 10vw;
+        font-size: 1.2vw;
+        border-radius: .3vw;
+    }
+    .services{
+        margin-top: 4vw;
+        gap: 1.5vw;
+    }
+    .soluction{
+        padding-bottom: 3vw;
+    }
+    .soluction, .planos{
+        margin-top: 1vw;
+    }
+    .planos{
+        padding-top: 1vw;
+    }
+    .planos table th, .planos table td{
+        font-size: 1vw;
+    }
+    .planos .contratar a{
+        font-size: 1.2vw;
+        padding: .5vw 1vw;
+        margin-top: 1vw;
+    }
+    .parcerias .slide{
+        width: 10vw;
+        height: 10vw;
+    }
+    .sobre img{
+        width: 20vw;
+    }
+    .sobre-text, .text-empresa p{
+        font-size: 1.1vw;
+    }
+    .sub-contato{
+        font-size: 1.25vw;
+    }
+    .sub-contato a{
+        font-size: 1vw;
+    }
+}
+
+@media screen and (min-width: 2000px){
+    .slide{
+        width: 25vw;
+        height: 25vw;
+    }
+    .parcerias .slide{
+        width: 10vw;
+        height: 10vw;
+    }
+    .sobre img{
+        width: 40vw;
+    }
+    .button{
+        border: solid .1vw white;
+    }
+}
+ 
+/*FIM RESOLUÇÕES*/
+
+/*IMPRIMINDO*/
+@media print{
+    .print{
+        display: unset;
+    }
+    header ul{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .button{
+        display: none;
+    }
+    .content .image{
+        display: none;
+    }
+    .content img{
+        margin-bottom: 0;
+    }
+    .services{
+        margin-top: 0;
+        grid-template-columns: repeat(8,1fr);
+    }
+    .service-box{
+        transform: scale(.5);
+        -moz-transform: scale(.5);
+        -webkit-transform: scale(.5);
+        -o-transform: scale(.5);
+        margin-bottom: 10px;
+    }
+    .service{
+        margin-top: 0;
+    }
+    .slide{
+        margin-top: 40px;
+    }
+    .soluction-text{
+        transform: scale(.9);
+        -moz-transform: scale(.9);
+        -webkit-transform: scale(.9);
+        -o-transform: scale(.9);
+    }
+    .planos{
+        margin-top: 70px;
+    }
+}
